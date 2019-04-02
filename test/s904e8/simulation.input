@@ -1,0 +1,30 @@
+SimulationType MonteCarlo
+NumberOfCycles 60000 
+NumberOfInitializationCycles 10000
+PrintEvery 1000
+PrintPropertiesEvery 1000
+RestartFile no
+Forcefield EPM-CO2
+CutOffVDW 8.0
+ChargeMethod Ewald
+CutOffChargeCharge 11.2
+
+Box 0
+BoxLengths 19.5 19.5 19.5
+ExternalTemperature 298.15
+ExternalPressure 1e6
+ComputeMolecularPressure no
+VolumeChangeProbability 0.01
+NumberOfTrialPositionsForTheFirstBeadWidom 100
+
+Component 0 MoleculeName water
+	    MoleculeDefinition SPCE-water
+	    TranslationProbability 0.5
+	    RotationProbability 0.5
+	    RegrowProbability 0.0
+	    CreateNumberOfMolecules 250
+Component 1 MoleculeName s1e1 
+            MoleculeDefinition Roeselova_O3
+	    WidomProbability 1.0
+	    CreateNumberOfMolecules 0
+	    
