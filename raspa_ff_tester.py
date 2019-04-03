@@ -20,5 +20,5 @@ for f in testsplit:
 			sys.stdout.write(line.replace(solute, f))
 		else:
 			sys.stdout.write(line)
-	subprocess.run(['sbatch raspajob', 'cd ../'], shell=True)
+	subprocess.run(['sbatch raspajob', 'cd ../'], cwd=f, shell=True)
 
