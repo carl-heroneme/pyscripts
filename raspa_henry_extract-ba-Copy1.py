@@ -5,6 +5,7 @@
 import os
 import pandas as pd
 import numpy as np
+from scipy.stats import t
 
 rootdir = os.getcwd()
 with open("simulation.input", "rt") as in_file:
@@ -91,7 +92,7 @@ def henrycalc(a):
     #print(henry1.size)
     #print(henry2)
     #print(len(henry2)) 
-    s1 = np.std(henry2, ddof = 1)/(a)**0.5
+    s1 = np.std(henry2, ddof = 1)*t.ppf(0.975, a-1)/(a)**0.5
     out_file = open("HenryBA.txt", "a")
     out_file.write('Set for ' + str(a) + ' blocks.\n'+'Count\n')
     #out_file.write('Set for ' + str(a) + ' blocks.\n')
