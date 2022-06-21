@@ -1,6 +1,6 @@
 #this script converts and block averages henry coefficients from RASPA runs in your current directory and any subdirectories.
 #gets solute name info from Component 1 in your input file. 
-#currently for MPa you must manually set the molar mass in kg for the solvent in line 47
+#currently for MPa you must manually set the molar mass in kg for the solvent in line 48
 
 import os
 import pandas as pd
